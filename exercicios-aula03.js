@@ -80,6 +80,35 @@ for (let propriedade in carro) {
 
 // Chame os métodos ligar e desligar do objeto carro e imprima no console as mensagens resultantes.
 // Chame o método obterDetalhes e imprima no console a string retornada.
+
+carro.ligado = false;
+carro.ligar = function () {
+  if (!this.ligado) {
+    this.ligado = true;
+    console.log("O carro está ligado.");
+  } else {
+    console.log("O carro já está ligado.");
+  }
+};
+carro.desligar = function () {
+  if (this.ligado) {
+    this.ligado = false;
+    console.log("O carro está desligado.");
+  } else {
+    console.log("O carro já está desligado.");
+  }
+};
+carro.obterDetalhes = function () {
+  return `Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${
+    this.ano
+  }, Cor: ${this.cor}, Estado: ${this.ligado ? "Ligado" : "Desligado"}`;
+};
+carro.ligar();
+carro.ligar();
+carro.desligar();
+carro.desligar();
+console.log(carro.obterDetalhes());
+
 // 4 - No objeto carro, adicione uma nova propriedade chamada placa representando a placa do veículo. Defina a propriedade placa como não enumerável, para que ela não seja listada ao percorrer as propriedades do objeto.
 
 // Utilize um loop for...in para percorrer as propriedades do objeto carro e imprima no console apenas as propriedades enumeráveis.
