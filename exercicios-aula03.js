@@ -142,3 +142,15 @@ console.log("Placa do carro:", carro.placa);
 // Imprima no console o objeto carroComNovosDetalhes para verificar as informações do carro com os novos detalhes.
 
 // Modifique o valor de uma propriedade no objeto carroComNovosDetalhes e imprima novamente o objeto no console para confirmar as alterações.
+
+const carroNovo = {
+  marca: "Honda",
+  modelo: "Civic",
+  ano: 2022,
+  cor: "Preto",
+};
+
+const carroComNovosDetalhes = { ...carro, ...carroNovo };
+console.log("Carro com novos detalhes:", carroComNovosDetalhes);
+carroComNovosDetalhes.cor = "Vermelho";
+console.log("Carro com novos detalhes após alteração:", carroComNovosDetalhes);
