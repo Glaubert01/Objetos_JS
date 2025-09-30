@@ -24,3 +24,16 @@ const estudante = {
     },
   ],
 };
+
+function exibirTelefones(telefone1, telefone2) {
+  console.log("Telefone 1:", telefone1);
+  console.log("Telefone 2:", telefone2);
+}
+exibirTelefones(...estudante.telefones);
+
+const dadosEnvio = {
+  destinatario: estudante.nome,
+  ...estudante.enderecos[0],
+};
+
+console.log(dadosEnvio);
