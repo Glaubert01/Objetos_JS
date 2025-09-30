@@ -48,6 +48,26 @@ console.log(`Categoria de desempenho: ${desempenho}`);
 
 // Utilize novamente o loop for...in para percorrer todas as propriedades atualizadas do objeto carro e imprima no console o nome da propriedade e o seu valor.
 
+const carro = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  ano: 2020,
+  cor: "Prata",
+};
+
+for (let propriedade in carro) {
+  console.log(`${propriedade}: ${carro[propriedade]}`);
+}
+
+carro.tipoCombustivel = "Flex";
+carro.numeroPortas = 4;
+carro.automatico = true;
+
+console.log("Propriedades atualizadas do carro:");
+for (let propriedade in carro) {
+  console.log(`${propriedade}: ${carro[propriedade]}`);
+}
+
 // 3 - Crie um arquivo chamado metodosObjeto.js para realizar este exercício.
 
 // Utilize o objeto carro do exercício 2 com as propriedades iniciais (marca, modelo, ano, cor) e adicione:
