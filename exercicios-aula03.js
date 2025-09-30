@@ -117,6 +117,20 @@ console.log(carro.obterDetalhes());
 
 // Tente acessar a propriedade placa diretamente usando carro.placa e imprima no console o resultado obtido.
 
+Object.defineProperty(carro, "placa", {
+  value: "ABC-1234",
+  enumerable: false,
+});
+
+console.log("Propriedades enumeráveis do carro:");
+for (let propriedade in carro) {
+  console.log(`${propriedade}: ${carro[propriedade]}`);
+}
+
+console.log("Chaves enumeráveis do carro:", Object.keys(carro));
+
+console.log("Placa do carro:", carro.placa);
+
 // 5 - Crie um novo objeto chamado carroNovo para representar as informações de um novo carro. O objeto deve ter as seguintes propriedades:
 
 // marca (string): marca do novo carro.
